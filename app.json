@@ -31,6 +31,10 @@
          "description": "Your bot token. Get one from @BotFather Bruh",
          "required": true,
          "value": ""
+       },
+        "USERBOT_PREFIX": {
+            "description": "Userbot command prefix, Leave it empty if you don't know what that is.",
+            "required": false
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
