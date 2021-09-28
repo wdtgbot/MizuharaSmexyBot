@@ -192,7 +192,7 @@ SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(1702541119)
 SUDO_USERS.add(1702541119)
 
-Client(SESSION_STRING, api_id=API_ID, api_hash=API_HASH)
+Client(bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
 aiohttpsession = ClientSession()
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 app = Client("MizuharaSmexyBot", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
