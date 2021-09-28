@@ -192,18 +192,26 @@ SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(1702541119)
 SUDO_USERS.add(1702541119)
 
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-dispatcher = updater.dispatcher
-print("[Mizuhara]: TELETHON CLIENT STARTING")
-telethn = TelegramClient("MizuharaSmexyBot", api_id=API_ID, api_hash=API_HASH)
-print("[INFO]: INITIALZING AIOHTTP SESSION")
+if not HEROKU:
+    app2 = Client(
+        "userbot",
+        phone_number=PHONE_NUMBER,
+        api_id=API_ID,
+        api_hash=API_HASH,
+    )
+else:
+    app2 = Client(SESSION_STRING, api_id=API_ID, api_hash=API_HASH)
 aiohttpsession = ClientSession()
-print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
-pbot = Client("Mizuharapbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+app = Client("wbb", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
+print("[INFO]: STARTING BOT CLIENT")
+app.start()
+print("[INFO]: STARTING USERBOT CLIENT")
+app2.start()
 
-apps = []
-apps.append(pbot)
+print("[INFO]: GATHERING PROFILE INFO")
+x = app.get_me()
+y = app2.get_me()
 
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
