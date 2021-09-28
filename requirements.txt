@@ -125,3 +125,4 @@ aiohttp[speedups]
 cryptg
 cryptography
 pymongo
+pyromod
