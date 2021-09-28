@@ -192,6 +192,9 @@ SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(1702541119)
 SUDO_USERS.add(1702541119)
 
+loop = asyncio.get_event_loop()
+loop.run_until_complete(load_sudoers())
+
 if not HEROKU:
     app2 = Client(
         "userbot",
