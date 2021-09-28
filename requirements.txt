@@ -47,7 +47,6 @@ youtube_search_python
 youtube_search
 asyncio
 dateparser==1.0.0
-pymongo==3.11.0
 dnspython
 secureme
 apscheduler
@@ -125,3 +124,4 @@ dnspython # needed to connect to cloud MongoDB instances
 aiohttp[speedups]
 cryptg
 cryptography
+pymongo
