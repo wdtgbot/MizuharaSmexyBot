@@ -10,7 +10,7 @@ from pyrogram.types import Message
 from pyromod import listen
 from Python_ARQ import ARQ
 
-is_config = path.exists("config.py")
+is_config = path.exists("MizuharaSmexyBot.config.py")
 
 if is_config:
     from config import *
@@ -18,9 +18,9 @@ else:
     from MizuharaSmexyBot.sample_config import *
 
 USERBOT_PREFIX = USERBOT_PREFIX
-GBAN_LOG_GROUP_ID = GBAN_LOG_GROUP_ID
-SUDOERS = SUDO_USERS_ID
-LOG_GROUP_ID = LOG_GROUP_ID
+EVENT_LOGS = EVENT_LOGS
+SUDO_USERS = SUDO_USERS
+JOIN_LOGGER = JOIN_LOGGER
 MOD_LOAD = []
 MOD_NOLOAD = []
 bot_start_time = time.time()
