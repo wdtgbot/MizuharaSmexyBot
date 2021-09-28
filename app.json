@@ -41,6 +41,10 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
+      },
+        "SESSION_STRING": {
+            "description": "Need for Userbot Module So u can execute .sh & .l cmd",
+            "required": true,
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
