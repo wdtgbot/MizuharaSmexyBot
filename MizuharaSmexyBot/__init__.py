@@ -17,6 +17,7 @@ if is_config:
 else:
     from MizuharaSmexyBot.sample_config import *
 
+USERBOT_PREFIX = USERBOT_PREFIX    
 EVENT_LOGS = EVENT_LOGS
 SUDO_USERS = SUDO_USERS
 JOIN_LOGGER = JOIN_LOGGER
