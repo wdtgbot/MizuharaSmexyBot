@@ -10,7 +10,7 @@ from pyrogram.types import Message
 from pyromod import listen
 from Python_ARQ import ARQ
 
-is_config = path.exists("MizuharaSmexyBot.config.py")
+is_config = path.exists("MizuharaSmexyBot.sample_config.py")
 
 if is_config:
     from config import *
