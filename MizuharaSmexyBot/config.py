@@ -13,7 +13,7 @@ class Config(object):
     LOGGER = True
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
-    USERBOT_PREFIX = "USERBOT_PREFIX"
+    USERBOT_PREFIX = "awoo"
     API_ID = 123456  # integer value, dont use ""
     API_HASH = "awoo"
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
@@ -50,6 +50,7 @@ class Config(object):
     DONATION_LINK = None  # EG, paypal
     CERT_PATH = None
     PORT = 5000
+                     
     DEL_CMDS = True  # Delete commands that users dont have access to, like delete /ban if a non admin uses it.
     STRICT_GBAN = True
     WORKERS = (
