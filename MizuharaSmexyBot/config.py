@@ -12,8 +12,7 @@ def get_user_list(config, key):
 class Config(object):
     LOGGER = True
     # REQUIRED
-    # Login to https://my.telegram.org and fill in these slots with the details given by it
-    USERBOT_PREFIX = "awoo"
+    # Login to https://my.telegram.org and fill in these slots with the details given by id
     API_ID = 123456  # integer value, dont use ""
     API_HASH = "awoo"
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
