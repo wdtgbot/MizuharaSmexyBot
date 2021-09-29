@@ -18,7 +18,7 @@ async def shazamm(client, message):
     kkk = await fetch_audio(client, message)
     downloaded_file_name = kkk
     f = {"file": (downloaded_file_name, open(downloaded_file_name, "rb"))}
-    await kek.edit("**Searching For This Song In Friday's DataBase.**")
+    await kek.edit("**Searching For This Song In Mizuhara's DataBase.**")
     r = requests.post("https://starkapi.herokuapp.com/shazam/", files=f)
     try:
         xo = r.json()
@@ -42,7 +42,7 @@ async def shazamm(client, message):
     messageo = f"""<b>Song Shazamed.</b>
 <b>Song Name : </b>{title}
 <b>Song By : </b>{by}
-<u><b>Identified By @Mizuhara_Ro_Bot
+<u><b>Identified By @MizuharaSmexyBot
 """
     await client.send_photo(message.chat.id, image, messageo, parse_mode="HTML")
     os.remove(downloaded_file_name)
@@ -52,5 +52,5 @@ async def shazamm(client, message):
 __mod_name__ = "Shazam"
 __help__ = """
 Find any song with it's music or part of song
- - /shazam : identify the song from Friday's Database
+ - /shazam : identify the song from Mizuhara's Database
 """
