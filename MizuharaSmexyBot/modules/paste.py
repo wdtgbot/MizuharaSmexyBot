@@ -7,7 +7,6 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from MizuharaSmexyBot import aiohttpsession as session
 from MizuharaSmexyBot import pbot as app
 from MizuharaSmexyBot.utils.errors import capture_err
 from MizuharaSmexyBot.utils.pastebin import paste
