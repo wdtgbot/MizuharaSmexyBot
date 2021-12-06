@@ -6,14 +6,15 @@ import time
 import traceback
 from functools import wraps
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
+
 import aiohttp
 from PIL import Image
 from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
-from MizuharaSmexyBot
-import OWNER_ID, GBAN_LOGS
-from MizuharaSmexyBot.pyrogramee.pyrogram import pbot
+
+from MizuharaSmexyBot import OWNER_ID, SUPPORT_CHAT
+from MizuharaSmexyBot.services.pyrogram import pbot
 
 
 def get_user(message: Message, text: str) -> [int, str, None]:
@@ -322,7 +323,7 @@ def capture_err(func):
                 ),
             )
             for x in error_feedback:
-                await pbot.send_message(GBAN_LOGS, x)
+                await pbot.send_message(SUPPORT_CHAT, x)
             raise err
 
     return capture

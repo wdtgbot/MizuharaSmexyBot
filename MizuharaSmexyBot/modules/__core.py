@@ -1,15 +1,10 @@
+import os
+
+from MizuharaSmexyBot import OWNER_ID, DEV_USERS
 from MizuharaSmexyBot import telethn as tbot
 from MizuharaSmexyBot.events import register
-import os
-import asyncio
-import os
-import time
-from datetime import datetime
-from MizuharaSmexyBot import OWNER_ID, DEV_USERS
-from MizuharaSmexyBot import TEMP_DOWNLOAD_DIRECTORY as path
-from MizuharaSmexyBot import TEMP_DOWNLOAD_DIRECTORY
-from datetime import datetime
-water = 'MizuharaSmexyBot/resources/20210816_185444.jpg'
+
+water = './MizuharaSmexyBot/resources/20210816_185444.jpg'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
@@ -33,4 +28,6 @@ async def Prof(event):
              reply_to=message_id,
          )
     else:
-        await event.reply("`No File Found!`")
+        await event.reply("No File Found!")
+
+
